@@ -10,7 +10,12 @@
 <body>
     <form>
         <h1>Pig - The Dice Game</h1>
-        <h2 class="nameplate" id="nameplate">Click here to enter name:</h2>
+
+        <label for="pname">Input player name:</label>
+        <input type="text" required id="pname">
+        <button id="submit">Submit</button>
+        
+        <h2 class="nameplate" id="nameplate">Player:</h2>
         <h2 id="totalpoints">Total points: 0</h2>
         <h2 id="currentpoints">Current round points: 0</h2>
         <h2 id="roundnumber">Number of rounds: 0</h2>

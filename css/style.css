@@ -14,6 +14,13 @@ form {
     gap: 0.5rem;
 }
 
+input[type=text] {
+    padding: 12px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
 .nameplate {
     text-decoration: underline;
 }

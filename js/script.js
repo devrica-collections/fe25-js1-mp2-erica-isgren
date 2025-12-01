@@ -5,6 +5,8 @@ let totalScore = 0;
 let previousDice = 1; 
 let playerName = 'Walter White'; // Default name if player doesnt pick name
 
+const nameSubmit = document.querySelector('#submit');
+const input = document.querySelector('input');
 const namePlate = document.querySelector('#nameplate');
 const btnRoll = document.querySelector('#roll');
 const btnHold = document.querySelector('#hold');
@@ -13,7 +15,7 @@ const currentPoints = document.querySelector('#currentpoints');
 const currentRounds = document.querySelector('#roundnumber');
 const currentRolls = document.querySelector('#currentrolls');
 
-namePlate.addEventListener('click', updateName);
+nameSubmit.addEventListener('click', updateName);
 btnRoll.addEventListener('click', diceRoll);
 btnHold.addEventListener('click', hold);
 
@@ -26,8 +28,9 @@ const diceVis = [document.getElementById('die one'),
             ];
 
 // Get playername name and display it
-function updateName(){
-    playerName = prompt('Enter your name');
+function updateName(event){
+    event.preventDefault();
+    playerName = input.value;
     namePlate.innerText = `Player: ${playerName}`;
 }
 
